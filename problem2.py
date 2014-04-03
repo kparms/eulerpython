@@ -18,10 +18,23 @@ def fib(n):
 		return fib(n-1) + fib(n-2)
 		
 
-#the fast way - the golden ratio
+#the fast way
 def fastfib(n):
 	return ((1+math.sqrt(5))**n-(1-math.sqrt(5))**n)/(2**n*math.sqrt(5))
 
 #Just by trial and error I found that the F^33 is < 4 million, F^34 is > 4 million
-print(fastfib(33))
-print(fastfib(34))
+#print(fastfib(33))
+#print(fastfib(34))
+
+total = 0
+for x in range(0,34):
+	#I have to round the fast way to truncate the decimal 
+	fibber = round(fastfib(x),0)
+	if fibber%2==0:
+		print('even')
+		print(fibber)
+		total += fibber
+	else:
+		print('odd')
+		
+print(total)
