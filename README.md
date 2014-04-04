@@ -1,6 +1,4 @@
 Project Euler: http://projecteuler.net/
 ===========
 
-I created an account for Project Euler and will be playing around with Python.  The source code can be found here
-
-http://projecteuler.net/progress=kparms
+I created an account for Project Euler and will be playing around with Python.
