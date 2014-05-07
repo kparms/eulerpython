@@ -13,5 +13,31 @@
 #21: 1,3,7,21
 #28: 1,2,4,7,14,28
 #We can see that 28 is the first triangle number to have over five divisors.
-
 #What is the value of the first triangle number to have over five hundred divisors?
+import sys
+import math
+
+def divisors(num):
+    divisors = 0
+    sqrt = int(math.sqrt(num))
+    for y in range(1,sqrt+1):
+        #sys.stdout.write(str(y))
+        #sys.stdout.write(' ')
+        if (num%y == 0):
+            divisors += 2
+    #print(' ')
+    if (sqrt * sqrt == num):
+        divisors -= 1
+    return divisors
+
+sum = 0
+for x in range(1,10000000):
+    sum += x
+    div = divisors(sum)
+    #print (div)
+    if (div > 200):
+        sys.stdout.write(str(sum))
+        sys.stdout.write(' : ')
+        print(div)
+    if (div > 500):
+        sys.exit()
