@@ -5,7 +5,7 @@ import sys
 
 def palintest(number):	
 	number = str(number)	
-	for x in range(0, round(len(number)/2)):
+	for x in range(0, int(round(len(number)/2))):
 		#print(number[x])
 		#print(number[len(number)-(x+1)])
 		if (number[x] != number[len(number)-(x+1)]):
